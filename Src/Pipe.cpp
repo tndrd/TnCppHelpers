@@ -13,5 +13,5 @@ Pipe::Pipe(int flags) {
   Out = newPipeFd[0];
 }
 
-int Pipe::ReadFd() const { return In.Get(); }
-int Pipe::WriteFd() const { return Out.Get(); }
+int Pipe::WriteFd() const { return In.Get(); }
+int Pipe::ReadFd() const { return Out.Get(); }
