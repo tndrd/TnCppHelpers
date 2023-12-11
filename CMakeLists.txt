@@ -20,11 +20,11 @@ target_link_libraries(${PFX}PThread PUBLIC pthread ${PFX}Exception)
 add_library(${PFX}Logger Src/Logger.cpp)
 target_link_libraries(${PFX}Logger PUBLIC ${PFX}PThread)
 
+add_library(${PFX}Pipe Src/Pipe.cpp)
+target_link_libraries(${PFX}Pipe PUBLIC ${PFX}Exception ${PFX}FileDescriptor)
+
 add_library(${PFX}Selector Src/Selector.cpp)
-target_link_libraries(${PFX}Selector PUBLIC ${PFX}Exception)
+target_link_libraries(${PFX}Selector PUBLIC ${PFX}Exception ${PFX}Pipe)
 
 add_library(${PFX}Files Src/Files.cpp)
 target_link_libraries(${PFX}Files PUBLIC ${PFX}Exception)
-
-add_library(${PFX}Pipe Src/Pipe.cpp)
-target_link_libraries(${PFX}Pipe PUBLIC ${PFX}Exception ${PFX}FileDescriptor)
