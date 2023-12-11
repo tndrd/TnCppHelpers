@@ -27,4 +27,4 @@ add_library(${PFX}Files Src/Files.cpp Inc/Files.hpp)
 target_link_libraries(${PFX}Files PUBLIC ${PFX}Exception)
 
 add_library(${PFX}Pipe Src/Pipe.cpp Inc/Pipe.hpp)
-target_link_libraries(${PFX}Pipe PUBLIC ${PFX}Exception ${PFX}DescriptorWrapper)
+target_link_libraries(${PFX}Pipe PUBLIC ${PFX}Exception ${PFX}FileDescriptor)
